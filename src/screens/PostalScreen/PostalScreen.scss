@@ -1,0 +1,63 @@
+.postal-wrapper {
+  @extend .center-by-flex;
+  flex-direction: column;
+  span {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 25px 0px;
+  }
+  .postal-code {
+    width: 60%;
+    span{
+        font-size: 13px;
+    }
+    input[type=text] {
+      width: 98.7%;
+      font-size: 23px;
+      border: 1px solid $body-hover;
+      padding: 10px 5px;
+      border-radius: 10px;
+      color: gray;
+      transition: 0.3s;
+      outline: none !important;
+    }
+    .input-error{
+        border: 2px solid $primary !important;
+    }
+    input[type=text]:focus {
+      border: 5px solid $body-hover;
+      transition: 0.3s;
+      -webkit-appearance: none;
+    }
+    // Removing Side arrows from the textfield
+    input[type=text]::-webkit-outer-spin-button,
+    input[type=text]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=text] {
+      -moz-appearance: textfield;
+    }
+    input[type=text]:hover,
+    input[type=text]:focus {
+      -moz-appearance: number-input;
+    }
+
+    .postal-option {
+      @extend .center-by-flex;
+      width: 100%;
+      padding: 15px 0px;
+      margin: auto 0px;
+      border-radius: 10px;
+      margin-top: 2px;
+      background-color: $body-hover;
+      transition: 0.3s;
+      &:hover {
+        background-color: gray;
+        transition: 0.3s;
+        color: $primarytext;
+        cursor: pointer;
+      }
+    }
+  }
+}
